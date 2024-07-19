@@ -130,7 +130,7 @@ const client = createClient({
   authToken: "...",
 });
 
-const txn = await db.transaction("read");
+const txn = await client.transaction("read");
 
 await txn.execute('ATTACH "<database-id>" AS my_db');
 
